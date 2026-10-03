@@ -74,18 +74,33 @@ export default function PersonalTrainingPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-12 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">Ready to Start Your Journey?</h2>
+      {/* Calendly Scheduling */}
+      <section className="bg-white py-16 px-6 text-center" id="book">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-blue-900 mb-4">Book a Consultation</h2>
           <p className="text-gray-700 text-lg mb-8">
-            Book a free consultation with one of our trainers to discuss your fitness goals.
+            See available times below and schedule a free consultation directly on our calendar.
           </p>
-          <button
-            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-all"
-            onClick={handleGetStartedClick}
-          >
-            Book Now
-          </button>
+          <div className="w-full rounded-xl overflow-hidden shadow-lg border border-gray-200">
+            {/* Calendly Scheduling Embed */}
+            <iframe
+              src="https://calendly.com/goodwinalonzo/personal-training-consultation"
+              style={{ border: 0 }}
+              width="100%"
+              height="700"
+              title="Book a consultation"
+              loading="lazy"
+            />
+          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            Can&apos;t find a time that works?{" "}
+            <button
+              className="text-orange-600 underline hover:text-orange-700"
+              onClick={handleGetStartedClick}
+            >
+              Contact us directly
+            </button>
+          </p>
         </div>
       </section>
 
